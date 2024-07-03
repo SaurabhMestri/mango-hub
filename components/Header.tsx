@@ -1,37 +1,26 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const Header = (props: Props) => {
-
-    // javascript
   return (
-    <div style={{
-        display : 'flex',
-        alignItems : 'center',
-        justifyContent : 'space-between',
-        padding : '10px'
+    <header>
+      <div className="header-container" >
 
-    }} >
-        <div className="logo">Logo</div>
-        <nav style={{
-             display : 'flex',
-             alignItems : 'center',
-             justifyContent : 'space-between',
-     
-        }} >
-            <li>About</li>
-            <li>About</li>
-            <li>About</li>
-            <li>About</li>
-            <li>About</li>
-        </nav>
-        <div className="button-container">
-            <button>Login</button>
-            <button>Register</button>
-        </div>
-    </div>
-  )
-}
+      <div className="logo">Logo</div>
+      <nav>
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+      </nav>
+      <button className="btn" type="button" >
+        Login
+      </button>
 
-export default Header
+      </div>
+
+    </header>
+  );
+};
+
+export default Header;
