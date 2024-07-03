@@ -1,30 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-
-type Props = {}
+type Props = {};
 
 const Login = (props: Props) => {
-    const [isLoggedIn ,setIsLoggedIn] = useState(false)
-
-    const handleLogin = () => {
-        setIsLoggedIn(true)
-    }
-
-    const handleLogout = () => {
-        setIsLoggedIn(false)
-    }
-
   return (
-    <main >
-        {isLoggedIn  ? (
-            <button onClick={handleLogout}>Logout</button>
+    <div className="container">
+        
+    </div>
+  );
+};
 
-        ) : (
-
-            <button onClick={handleLogin} >Login</button>
-        )}
-      </main>
-  )
-}
-
-export default Login
+export default Login;
