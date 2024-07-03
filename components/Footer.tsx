@@ -4,9 +4,9 @@ type Props = {}
 
 const Footer = (props: Props) => {
   return (
-    <footer  >
-      <div className="footer-container">
-        &copy; Copyright 2024
+    <footer>
+      <div className="container">
+       Mango Hub &copy; Copyright 2024
       </div>
     </footer>
   )
