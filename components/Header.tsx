@@ -40,6 +40,7 @@ const Header = (props: Props) => {
           <div className="nav-links">
             {navLinks?.map((link) => (
               <Link key={link.id} href={`/${link.id}`}>
+
                 {link.name}
               </Link>
             ))}

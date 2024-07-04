@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 
 :root {
   --max-width: 1100px;
@@ -84,7 +84,8 @@
 html,
 body {
   overflow-x: hidden;
-  font-family: 'Poppins';
+  font-family: "Poppins";
+  scroll-behavior: smooth;
 }
 
 a {
@@ -99,7 +100,7 @@ a {
 }
 
 /* UTILITIES */
-.btn{
+.btn {
   border: 0;
   outline: 0;
   padding: 10px;
@@ -109,12 +110,24 @@ a {
   color: #fff;
 }
 
-.text-center{
+.btn2 {
+  padding: 10px;
+  width: 90px;
+  margin-top: 10px;
+  background-color: #f30000;
+  color: #fff;
+  border: none;
+}
+.text-center {
   text-align: center;
 }
 
-button:hover,a:hover{
+a:hover {
   color: orange;
+}
+
+button:hover {
+  background-color: #f46060;
 }
 
 .container {
@@ -126,14 +139,10 @@ button:hover,a:hover{
   margin-left: auto;
 }
 
-
 /* DESKTOP */
-header{
-  /* color: #fff; */
+header {
   background-color: transparent;
-  /* position: fixed; */
   width: 100%;
-  border-bottom: 0.5px solid #111;
 }
 
 .header-container {
@@ -143,47 +152,60 @@ header{
   padding: 20px 0;
 }
 
-.nav-links{
+.nav-links {
   display: flex;
   gap: 30px;
 }
 
 .nav-links a {
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 1.2;
   font-weight: 600;
 }
 
-.sidebar{
+.sidebar {
   display: none;
 }
 
-footer{
+.hero-section {
+  background-image: url("/images/background1.jpg");
+  background-size: cover;
+  border-radius: 30px;
+  margin-bottom : 20px;
+  height: 100%;
+}
+
+footer {
   text-align: center;
   color: #fff;
   background-color: black;
   padding: 20px 0;
 }
 
-.hero-container{
+.hero-text {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  padding-left: 80px;
+  top: 300px;
+  left: 200px;
+  width: 600px;
 }
 
-.hero-text h3{
+.hero-text h3 {
   font-size: 50px;
+  line-height: 0.1;
 }
-.hero-text h1{
+.hero-text h1 {
   font-size: 100px;
 }
 
-.hero-text p{
+.hero-text p {
   font-size: 20px;
 }
 
-.hero-img{
+.hero-img {
   height: 500px;
   width: 1000px;
 }
@@ -192,20 +214,22 @@ footer{
   display: none;
 }
 
-
 /* Mobile view */
 @media screen and (max-width: 767px) {
   .container {
-      width: 100%;
+    width: 100%;
   }
-  .nav-links{
+  .nav-links {
     display: none;
   }
-  .nav-menu{
+  .nav-menu {
     display: block;
   }
+  .header-container{
+    margin-top: 0;
+  }
 
-  .sidebar{
+  .sidebar {
     position: absolute;
     right: 0;
     top: 0;
@@ -215,11 +239,11 @@ footer{
     height: 100vh;
   }
 
-  .open{
+  .open {
     display: block;
   }
 
-  .sidebar-links{
+  .sidebar-links {
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -230,7 +254,7 @@ footer{
     height: 100vh;
   }
 
-  .close-icon{
+  .close-icon {
     position: absolute;
     left: 20px;
     top: 10px;
@@ -239,7 +263,7 @@ footer{
     font-size: 30px;
     color: #fff;
   }
-  
+
   .sidebar-links a {
     font-size: 24px;
   }
@@ -249,59 +273,71 @@ footer{
     height: 100%;
   }
 
-  .hero-text{
+  .hero-text {
     padding-bottom: 30px;
   }
-  .hero-img{
+  .hero-img {
     height: 400px;
     width: 450px;
+  }
+
+  .hero-text {
+    height: 100%;
+    
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+
+  }
+
+  .hero-text h3 {
+    font-size: 30px;
+    line-height: 1;
+  }
+  .hero-text h1 {
+    font-size: 50px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
   }
 }
 
 /* TAB */
 @media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
-    
+  .container {
+    width: 750px;
+  }
 }
 
-
 @media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-    
+  .container {
+    width: 970px;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
-    
+  .container {
+    width: 1170px;
+  }
 }
 
 @media (min-width: 1300px) {
-    .container {
-        width: 1270px;
-    }
+  .container {
+    width: 1270px;
+  }
 }
 
 @media (min-width: 1500px) {
-    .container {
-        width: 1470px;
-    }
+  .container {
+    width: 1470px;
+  }
 }
 
 @media (min-width: 1700px) {
-    .container {
-        width: 1670px;
-    }
+  .container {
+    width: 1670px;
+  }
 }
-
-
-
-
-
-
