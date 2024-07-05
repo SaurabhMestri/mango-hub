@@ -32,8 +32,8 @@ const Header = (props: Props) => {
               className="logo"
               src="/images/logo.png"
               alt="logo"
-              height={50}
-              width={50}
+              height={90}
+              width={350}
             />
           </Link>
 
