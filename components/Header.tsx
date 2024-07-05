@@ -6,7 +6,7 @@ type Props = {};
 
 const navLinks = [
   { name: "Home", id: "" },
-  { name: "About", id: "about" },
+  { name: "Product", id: "product" },
   { name: "Contact", id: "contact" },
   { name: "Login", id: "login" },
   { name: "Register", id: "register" },
