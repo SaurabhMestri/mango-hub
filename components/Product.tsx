@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { Key } from "react";
 
 
@@ -19,9 +20,10 @@ const Product = (props: ProductsProps) => {
         {props?.products?.map((product, index: Key) => {
           return (
             <div key={index} className="product-card">
-              <img height={100} width={200} src={product.product_image} alt={product.product_name} />
+              <Image height={200} width={200} src={product.product_image} alt={product.product_name} />
               <p>{product.product_name}</p>
               <h3>$ {product.price}</h3>
+              <button className="btn2">Add to Cart</button>
             </div>
           );
         })}

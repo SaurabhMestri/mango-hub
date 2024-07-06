@@ -93,11 +93,11 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
 
 /* UTILITIES */
 .btn {
@@ -127,7 +127,7 @@ a:hover {
 }
 
 button:hover {
-  background-color: #f46060;
+  background-color: #009c0d;
 }
 
 .container {
@@ -141,9 +141,7 @@ button:hover {
 
 /* DESKTOP */
 
-.logo{
-  width: 100%;
-}
+
 
 header {
   background-color: transparent;
@@ -178,7 +176,7 @@ header {
   border-radius: 30px;
   margin-bottom : 20px;
   height: 100%;
-  animation: fadeIn 2s;
+  animation: fadeIn 1s;
 }
 
 footer {
@@ -232,17 +230,22 @@ footer {
 .product-menu{
 display: grid;
 gap: 20px;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+margin: 20px auto;
+width: 1200;
+
 
 }
 
 .product-card{
-  background-color: #f30000;
+  background-color: #f0d6c4;
   border-radius: 20px;
   height: 100%;
   width: 100%;
+  animation: fadeIn 0.5s;
+  align-items: center;
+  text-align: center;
   padding: 10px;
-  
 }
 /* Mobile view */
 @media screen and (max-width: 767px) {
@@ -331,6 +334,10 @@ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
   .hero-text p {
     font-size: 15px;
+  }
+
+  .product-menu{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
