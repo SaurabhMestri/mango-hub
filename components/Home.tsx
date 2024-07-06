@@ -1,11 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
-import Gallery from "./Gallery";
+import Product, { ProductInterface } from "./Product";
 
-type Props = {};
+interface HomeProps {
+  products : ProductInterface[]
+}
 
-const Home = (props: Props) => {
+const Home = (props : HomeProps) => {
+  
   return (
     <>
       <Head>
@@ -31,7 +34,7 @@ const Home = (props: Props) => {
             <button className="btn2">See More</button>
           </div>
         </div>
-        <Gallery/>
+        <Product products={props.products} />
       </div>
     </>
   );
