@@ -30,10 +30,10 @@ const Header = (props: Props) => {
           <Link href="/">
             <Image
               className="logo"
-              src="/images/logo.png"
+              src="/images/new-logo.png"
               alt="logo"
-              width={250}
-              height={80}
+              width={150}
+              height={150}
             
             />
           </Link>
