@@ -19,11 +19,13 @@ const Product = (props: ProductsProps) => {
       <div className="product-menu">
         {props?.products?.map((product, index: Key) => {
           return (
-            <div key={index} className="product-card">
+            <div  key={index} className="product-card">
+              <a href="www.google.com">
               <Image height={200} width={200} src={product.product_image} alt={product.product_name} />
               <p>{product.product_name}</p>
               <h3>$ {product.price}</h3>
               <button className="btn2">Add to Cart</button>
+              </a>
             </div>
           );
         })}

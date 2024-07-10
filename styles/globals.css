@@ -141,8 +141,6 @@ button:hover {
 
 /* DESKTOP */
 
-
-
 header {
   background-color: transparent;
   width: 100%;
@@ -174,16 +172,34 @@ header {
   background-image: url("/images/background1.jpg");
   background-size: cover;
   border-radius: 30px;
-  margin-bottom : 20px;
+  margin-bottom: 20px;
   height: 100%;
   animation: fadeIn 1s;
 }
 
 footer {
-  text-align: center;
-  color: #fff;
-  background-color: black;
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 10px;
+  background-color: #393939;
+
+}
+
+.footer-content{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+}
+
+.copyright-content{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+
 }
 
 .hero-text {
@@ -219,25 +235,21 @@ footer {
 }
 
 @keyframes fadeIn {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
-  
 }
-.product-menu{
-display: grid;
-gap: 20px;
-grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-margin: 20px auto;
-width: 1200;
-
-
+.product-menu {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin: 20px auto;
 }
 
-.product-card{
+.product-card {
   background-color: #f0d6c4;
   border-radius: 20px;
   height: 100%;
@@ -246,7 +258,9 @@ width: 1200;
   align-items: center;
   text-align: center;
   padding: 10px;
+  cursor: pointer;
 }
+
 /* Mobile view */
 @media screen and (max-width: 767px) {
   .container {
@@ -258,7 +272,7 @@ width: 1200;
   .nav-menu {
     display: block;
   }
-  .header-container{
+  .header-container {
     margin-top: 0;
   }
 
@@ -316,12 +330,11 @@ width: 1200;
 
   .hero-text {
     height: 100%;
-    
+
     width: 100%;
     align-items: center;
     padding: 10px;
     text-align: center;
-
   }
 
   .hero-text h3 {
@@ -336,7 +349,7 @@ width: 1200;
     font-size: 15px;
   }
 
-  .product-menu{
+  .product-menu {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
