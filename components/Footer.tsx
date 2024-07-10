@@ -16,9 +16,8 @@ const Footer = (props: Props) => {
               height={100}
             />
             <p>
-              The whole world best quality Alphonso mangoes come from India,
-              within India it comes from Konkan, the coastal region of Western
-              Maharashtra.
+              The whole world best quality Alphonso mangoes come from Maharastra.
+              
             </p>
             <div className="social-icon">
               <a href="#" className="fa fa-facebook"></a>

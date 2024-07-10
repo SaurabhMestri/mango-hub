@@ -21,7 +21,7 @@ const Product = (props: ProductsProps) => {
           return (
             <div  key={index} className="product-card">
               <a href="www.google.com">
-              <Image height={200} width={200} src={product.product_image} alt={product.product_name} />
+              <Image height={180} width={180} src={product.product_image} alt={product.product_name} />
               <p>{product.product_name}</p>
               <h3>$ {product.price}</h3>
               <button className="btn2">Add to Cart</button>
