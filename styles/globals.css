@@ -185,7 +185,8 @@ footer {
   align-items: center;
   gap: 20px;
   padding: 50px 10px;
-  background-color: #ffffff;
+  background-color: #020202;
+  color:#fff;
 }
 
 .footer-content {
@@ -236,6 +237,7 @@ footer {
 
 .nav-menu {
   display: none;
+  font-size: 25px;
 }
 
 @keyframes fadeIn {
@@ -270,7 +272,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 500px;
-  height: 500px;
+  height: 100%;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -286,7 +288,7 @@ footer {
 
 .form-group input {
   padding: 10px;
-  width: 100%;
+  width: 300px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
@@ -294,7 +296,7 @@ footer {
 
 .form-group label {
   font-weight: bold;
-
+display: flex;
   margin-bottom: 5px;
 }
 
@@ -321,6 +323,9 @@ footer {
   transition: all 0.15s ease;
 }
 
+.forget{
+ margin-top: 10px; 
+}
 .facebook:hover {
   background: #2b6ff9;
   animation: fadeIn 1s;
@@ -424,6 +429,14 @@ footer {
 
   .login-container {
     width: 300px;
+  }
+
+  .form-group input {
+    width: 230px;
+  }
+
+  .footer-content{
+    display: block;
   }
 }
 
