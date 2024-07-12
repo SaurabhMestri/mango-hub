@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
   --max-width: 1100px;
   /* --border-radius: 12px; */
@@ -85,6 +84,7 @@ html,
 body {
   overflow-x: hidden;
   font-family: "Poppins";
+  font-weight: 900;
   scroll-behavior: smooth;
 }
 
@@ -270,9 +270,8 @@ footer {
   justify-content: center;
   align-items: center;
   width: 500px;
-  height: 500px;
-  background-color: #fff;
-  padding: 20px;
+  
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);  padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
   margin: 50px auto;
@@ -281,7 +280,12 @@ footer {
 }
 
 .login-container h2 {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.form-group{
+margin: 10px;
+
 }
 
 .form-group input {
@@ -293,9 +297,9 @@ footer {
 }
 
 .form-group label {
-  font-weight: bold;
-
-  margin-bottom: 5px;
+      display: inline-block;
+    font-weight: bold;
+    margin: 10px;
 }
 
 .social-icons-btn {
@@ -424,6 +428,10 @@ footer {
 
   .login-container {
     width: 300px;
+  }
+
+  .footer-content{
+    display: table-caption;
   }
 }
 

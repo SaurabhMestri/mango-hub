@@ -1,19 +1,16 @@
+import React from 'react'
 import Image from "next/image";
-import React, { useState } from "react";
 import Google from "@/public/images/gogle-.png";
 import Facebook from "@/public/images/facebook.png";
-import Link from "next/link";
-import Register from "./register";
 
+type Props = {}
 
-type Props = {};
-
-const Login = (props: Props) => {
+const Register = (props: Props) => {
   return (
     <div className="container">
       <div className="login-container">
         <form action="#" method="POST" className="login-form">
-          <h2>Login</h2>
+          <h2>Register</h2>
           <div className="form-group">
             <label>Username</label>
             <input
@@ -33,14 +30,23 @@ const Login = (props: Props) => {
               name="password"
             />
           </div>
+          <div className="form-group">
+            <label>Confirm Password</label>
+            <input
+              placeholder="Password"
+              type="password"
+              id="password"
+              name="password"
+            />
+          </div>
           <div className="forget">
             <a href=""> Forget Password?</a>
           </div>
           <button className="btn" type="submit">
             Login
-          </button><Link href='/register'>
-          <button className="btn">Register</button>
-          </Link>
+          </button>
+          <button className="btn">Sign Up</button>
+
           <div className="social-icons-btn">
             <a className="icons google" href="#">
               <Image src={Google} height={30} width={30}  alt="google"/>
@@ -52,7 +58,7 @@ const Login = (props: Props) => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Register
