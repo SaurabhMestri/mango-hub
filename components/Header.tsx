@@ -6,7 +6,11 @@ type Props = {};
 
 const navLinks = [
   { name: "Home", id: "" },
+<<<<<<< HEAD
   { name: "Product", id: "product" },
+=======
+  { name: "Product", id: "#products" },
+>>>>>>> 62ded01fe5b60de5e2064ce31e5c4d27a205ab8b
   { name: "Contact", id: "contact" },
   { name: "Login", id: "login" },
   { name: "Register", id: "register" },
@@ -30,10 +34,11 @@ const Header = (props: Props) => {
           <Link href="/">
             <Image
               className="logo"
-              src="/images/logo.png"
+              src="/images/new-logo.png"
               alt="logo"
-              height={90}
-              width={350}
+              width={130}
+              height={130}
+            
             />
           </Link>
 

@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
   --max-width: 1100px;
   /* --border-radius: 12px; */
@@ -85,6 +84,7 @@ html,
 body {
   overflow-x: hidden;
   font-family: "Poppins";
+  font-weight: 900;
   scroll-behavior: smooth;
 }
 
@@ -93,11 +93,11 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
 
 /* UTILITIES */
 .btn {
@@ -108,6 +108,7 @@ a {
   cursor: pointer;
   background-color: black;
   color: #fff;
+  margin: 10px;
 }
 
 .btn2 {
@@ -127,7 +128,8 @@ a:hover {
 }
 
 button:hover {
-  background-color: #f46060;
+  background-color: #009c0d;
+  animation: fadeIn 0.8s;
 }
 
 .container {
@@ -140,6 +142,7 @@ button:hover {
 }
 
 /* DESKTOP */
+
 header {
   background-color: transparent;
   width: 100%;
@@ -171,15 +174,36 @@ header {
   background-image: url("/images/background1.jpg");
   background-size: cover;
   border-radius: 30px;
-  margin-bottom : 20px;
+  margin-bottom: 20px;
   height: 100%;
+  animation: fadeIn 1s;
 }
 
 footer {
-  text-align: center;
-  color: #fff;
-  background-color: black;
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 10px;
+  background-color: #ffffff;
+}
+
+.footer-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+}
+
+.footer-content li {
+  list-style: none;
+}
+
+.copyright-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 .hero-text {
@@ -214,6 +238,102 @@ footer {
   display: none;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.product-menu {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 20px auto;
+}
+
+.product-card {
+  background-color: #f0d6c4;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  animation: fadeIn 0.5s;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  text-align: center;
+  animation: fadeIn 2s;
+}
+
+.login-container h2 {
+  margin-bottom: 10px;
+}
+
+.form-group{
+margin: 10px;
+
+}
+
+.form-group input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group label {
+      display: inline-block;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.social-icons-btn {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.icons {
+  width: 50px;
+  height: 50px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  /* background: #111; */
+  margin: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80%;
+  box-shadow: 0 2px 2px #d1d1d1;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.facebook:hover {
+  background: #2b6ff9;
+  animation: fadeIn 1s;
+}
+
+.google:hover {
+  animation: fadeIn 1s;
+  background: orange;
+}
 /* Mobile view */
 @media screen and (max-width: 767px) {
   .container {
@@ -229,7 +349,7 @@ footer {
   .nav-menu {
     display: block;
   }
-  .header-container{
+  .header-container {
     margin-top: 0;
   }
 
@@ -287,12 +407,11 @@ footer {
 
   .hero-text {
     height: 100%;
-    
+
     width: 100%;
     align-items: center;
     padding: 10px;
     text-align: center;
-
   }
 
   .hero-text h3 {
@@ -305,6 +424,18 @@ footer {
 
   .hero-text p {
     font-size: 15px;
+  }
+
+  .product-menu {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .login-container {
+    width: 300px;
+  }
+
+  .footer-content{
+    display: table-caption;
   }
 }
 

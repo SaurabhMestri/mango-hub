@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 
 type Props = {}
@@ -42,3 +43,43 @@ const Product = (props: Props) => {
 }
 
 export default Product
+=======
+import Image from "next/image";
+import React, { Key } from "react";
+
+
+export interface ProductInterface {
+  product_name: string;
+  product_image: string;
+  price : number;
+}
+interface ProductsProps  {
+  products: ProductInterface[];
+};
+
+const Product = (props: ProductsProps) => {
+  
+  return (
+    <div id="products" className="container">
+      <h1>Mangoes Variety</h1>
+      <div className="product-menu">
+        {props?.products?.map((product, index: Key) => {
+          return (
+            <div  key={index} className="product-card">
+              <a href="www.google.com">
+              <Image height={180} width={180} src={product.product_image} alt={product.product_name} />
+              <p>{product.product_name}</p>
+              <h3>$ {product.price}</h3>
+              <button className="btn2">Add to Cart</button>
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+    
+  );
+};
+
+export default Product;
+>>>>>>> 62ded01fe5b60de5e2064ce31e5c4d27a205ab8b
