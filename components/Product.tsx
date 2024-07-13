@@ -1,3 +1,49 @@
+<<<<<<< HEAD
+import React from 'react'
+
+type Props = {}
+const Menu_List = [
+  {
+  menu_name:"ratnagiri hapus mango ",
+  menu_image:"image1"
+},
+  {
+  menu_name:"ratnagiri hapus mango",
+  menu_image:"image1"
+},
+  {
+  menu_name:"ratnagiri hapus mango",
+  menu_image:"image1"
+},
+  {
+  menu_name:"ratnagiri hapus mango",
+  menu_image:"image1"
+},
+  {
+  menu_name:"ratnagiri hapus mango",
+  menu_image:"image1"
+},
+  {
+  menu_name:"ratnagiri hapus mango",
+  menu_image:"image1"
+}
+];
+
+const Product = (props: Props) => {
+  return (
+    <div className="explore-menu">
+      <h1>Explore our Mango variety</h1>
+      <p className='menu-txt'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, est?</p>
+      <div className="explore-menu-list">
+        {Menu_List.map}
+
+      </div>
+    </div>
+  )
+}
+
+export default Product
+=======
 import Image from "next/image";
 import React, { Key } from "react";
 
@@ -36,3 +82,4 @@ const Product = (props: ProductsProps) => {
 };
 
 export default Product;
+>>>>>>> 62ded01fe5b60de5e2064ce31e5c4d27a205ab8b
