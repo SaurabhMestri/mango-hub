@@ -270,6 +270,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 500px;
+  flex-direction: column;
   
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);  padding: 20px;
   border-radius: 8px;
@@ -297,9 +298,14 @@ margin: 10px;
 }
 
 .form-group label {
-      display: inline-block;
+      display:inline-block;
     font-weight: bold;
     margin: 10px;
+    width: 300px;
+}
+
+.count{
+width: 30px;
 }
 
 .social-icons-btn {
@@ -334,6 +340,17 @@ margin: 10px;
   animation: fadeIn 1s;
   background: orange;
 }
+
+select{
+padding: 10px;
+font-family: "Poppins";
+font-weight: 800;
+font-size: 16px;
+margin-left: 10px;
+}
+  
+
+
 /* Mobile view */
 @media screen and (max-width: 767px) {
   .container {
