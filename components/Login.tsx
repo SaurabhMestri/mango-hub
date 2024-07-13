@@ -3,14 +3,17 @@ import React, { useState } from "react";
 import Google from "@/public/images/gogle-.png";
 import Facebook from "@/public/images/facebook.png";
 import Link from "next/link";
-import Register from "./register";
+import {motion} from "framer-motion"
 
 
-type Props = {};
+
+type Props = {
+  
+};
 
 const Login = (props: Props) => {
   return (
-    <div className="container">
+    <motion.div className="container">
       <div className="login-container">
         <form action="#" method="POST" className="login-form">
           <h2>Login</h2>
@@ -38,7 +41,7 @@ const Login = (props: Props) => {
           </div>
           <button className="btn" type="submit">
             Login
-          </button><Link href='/register'>
+          </button><Link href={""}>
           <button className="btn">Register</button>
           </Link>
           <div className="social-icons-btn">
@@ -51,7 +54,7 @@ const Login = (props: Props) => {
           </div>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
