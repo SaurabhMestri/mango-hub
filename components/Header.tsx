@@ -6,11 +6,7 @@ type Props = {};
 
 const navLinks = [
   { name: "Home", id: "" },
-<<<<<<< HEAD
-  { name: "Product", id: "product" },
-=======
   { name: "Product", id: "#products" },
->>>>>>> 62ded01fe5b60de5e2064ce31e5c4d27a205ab8b
   { name: "Contact", id: "contact" },
   { name: "Login", id: "login" },
   { name: "Register", id: "register" },
