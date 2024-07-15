@@ -38,7 +38,7 @@ const Header = (props: Props) => {
             />
           </Link>
 
-          <div className="nav-links">
+          <div className="nav-links ">
             {navLinks?.map((link) => (
               <Link key={link.id} href={`/${link.id}`}>
 
@@ -55,7 +55,7 @@ const Header = (props: Props) => {
             <div onClick={closeSidebar} className="close-icon">
               x
             </div>
-            <div className="sidebar-links">
+            <div className="sidebar-links ">
               {navLinks?.map((link) => (
                 <Link key={link.id} onClick={closeSidebar} href={`/${link.id}`}>
                   {link.name}

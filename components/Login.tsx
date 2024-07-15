@@ -1,17 +1,36 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import Google from "@/public/images/gogle-.png";
+import Google from "@/public/images/google.png";
 import Facebook from "@/public/images/facebook.png";
-
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 type Props = {};
 
 const Login = (props: Props) => {
+  const [action, setAction] = useState("Login");
+
   return (
-    <div className="container">
+    <motion.div className="container">
       <div className="login-container">
         <form action="#" method="POST" className="login-form">
-          <h2>Login</h2>
+          <h2>{action}</h2>
+          <div className="form-group">
+            {action === "Login" ? (
+              <div></div>
+            ) : (
+              <div>
+                <label>Name</label>
+                <input
+                  placeholder="Enter Your name"
+                  type="text"
+                  id="Name"
+                  name="Name"
+                  required
+                />
+              </div>
+            )}
+          </div>
           <div className="form-group">
             <label>Username</label>
             <input
@@ -31,25 +50,44 @@ const Login = (props: Props) => {
               name="password"
             />
           </div>
-          <div className="forget">
-            <a href=""> Forget Password?</a>
-          </div>
-          <button className="btn" type="submit">
+          {action === "Sign Up" ? (
+            <div></div>
+          ) : (
+            <div className="forget">
+              <a href=""> Forget Password?</a>
+            </div>
+          )}
+
+          <button
+            className={action === "Sign Up" ? "btn" : "btn"}
+            onClick={() => {
+              setAction("Login");
+            }}
+            type="submit"
+          >
             Login
           </button>
-          <button className="btn">Sign Up</button>
-
-          <div className="social-icons-btn">
+          <Link href={""}>
+            <button
+              className={action === "Login" ? "btn" : "btn"}
+              onClick={() => {
+                setAction("Sign Up");
+              }}
+            >
+              Sign Up
+            </button>
+          </Link>
+          {action==="Sign Up"?<div></div>: <div className="social-icons-btn">
             <a className="icons google" href="#">
-              <Image src={Google} height={30} width={30}  alt="google"/>
+              <Image src={Google} height={30} width={30} alt="google" />
             </a>
             <a className="icons facebook " href="#">
-              <Image src={Facebook} height={30} width={30} alt="facebook"/>
+              <Image src={Facebook} height={30} width={30} alt="facebook" />
             </a>
-          </div>
+          </div>}
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
