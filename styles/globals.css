@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
 :root {
   --max-width: 1100px;
   /* --border-radius: 12px; */
@@ -84,7 +85,6 @@ html,
 body {
   overflow-x: hidden;
   font-family: "Poppins";
-  font-weight: 900;
   scroll-behavior: smooth;
 }
 
@@ -141,19 +141,8 @@ button:hover {
   margin-left: auto;
 }
 
-/* Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 /* DESKTOP */
 
-/* Header.tsx */
 header {
   background-color: transparent;
   width: 100%;
@@ -177,15 +166,9 @@ header {
   font-weight: 600;
 }
 
-.nav-menu {
-  display: none;
-}
-
 .sidebar {
   display: none;
 }
-
-/* Home.tsx */
 
 .hero-section {
   background-image: url("/images/background1.jpg");
@@ -195,37 +178,6 @@ header {
   height: 100%;
   animation: fadeIn 1s;
 }
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 80vh;
-  padding-left: 80px;
-  top: 300px;
-  left: 200px;
-  width: 600px;
-}
-
-.hero-text h3 {
-  font-size: 50px;
-  line-height: 0.1;
-}
-
-.hero-text h1 {
-  font-size: 100px;
-}
-
-.hero-text p {
-  font-size: 20px;
-}
-
-.hero-img {
-  height: 500px;
-  width: 1000px;
-}
-
-/* Footer.tsx */
 
 footer {
   display: flex;
@@ -255,9 +207,17 @@ footer {
   padding: 10px;
 }
 
-/* Product.tsx */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  padding-left: 80px;
+  top: 300px;
+  left: 200px;
+  width: 600px;
+}
 
-<<<<<<< HEAD
 .hero-text h3 {
   font-size: 50px;
   line-height: 0.1;
@@ -288,8 +248,6 @@ footer {
     opacity: 1;
   }
 }
-=======
->>>>>>> fc6b7899cf0a882702d8360babb4222bcdd7f8e2
 .product-menu {
   display: grid;
   gap: 20px;
@@ -309,20 +267,13 @@ footer {
   cursor: pointer;
 }
 
-/* Login and Application_Form  */
-
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 500px;
-<<<<<<< HEAD
   height: 100%;
   background-color: #fff;
-=======
-  flex-direction: column;
-  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
->>>>>>> fc6b7899cf0a882702d8360babb4222bcdd7f8e2
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
@@ -332,11 +283,7 @@ footer {
 }
 
 .login-container h2 {
-  margin-bottom: 10px;
-}
-
-.form-group {
-  margin: 10px;
+  margin-bottom: 30px;
 }
 
 .form-group input {
@@ -348,19 +295,9 @@ footer {
 }
 
 .form-group label {
-  display: inline-block;
   font-weight: bold;
-<<<<<<< HEAD
 display: flex;
   margin-bottom: 5px;
-=======
-  margin: 10px;
-  width: 300px;
-}
-
-.count {
-  width: 10px;
->>>>>>> fc6b7899cf0a882702d8360babb4222bcdd7f8e2
 }
 
 .social-icons-btn {
@@ -374,6 +311,7 @@ display: flex;
   font-size: 2.5rem;
   font-weight: 500;
   text-decoration: none;
+  /* background: #111; */
   margin: 0.2rem;
   display: flex;
   justify-content: center;
@@ -397,15 +335,6 @@ display: flex;
   animation: fadeIn 1s;
   background: orange;
 }
-
-select {
-  padding: 10px;
-  font-family: "Poppins";
-  font-weight: 800;
-  font-size: 16px;
-  margin-left: 10px;
-}
-
 /* Mobile view */
 @media screen and (max-width: 767px) {
   .container {
@@ -502,27 +431,12 @@ select {
     width: 300px;
   }
 
-<<<<<<< HEAD
   .form-group input {
     width: 230px;
   }
 
   .footer-content{
     display: block;
-=======
-  .footer-content {
-    display: table-caption;
-  }
-  .form-group input {
-    width: 100%;
-  }
-
-  .form-group label {
-    display: inline-block;
-    font-weight: bold;
-    margin: 10px;
-    width: 200px;
->>>>>>> fc6b7899cf0a882702d8360babb4222bcdd7f8e2
   }
 }
 
@@ -530,10 +444,6 @@ select {
 @media (min-width: 768px) {
   .container {
     width: 750px;
-  }
-
-  .form-group input {
-    width: 100%;
   }
 }
 
