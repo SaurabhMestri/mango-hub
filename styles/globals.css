@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
   --max-width: 1100px;
-  /* --border-radius: 12px; */
+  --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -233,8 +233,7 @@ footer {
   align-items: center;
   gap: 20px;
   padding: 50px 10px;
-  background-color: #020202;
-  color:#fff;
+  background-color: #ffffff;
 }
 
 .footer-content {
@@ -257,39 +256,6 @@ footer {
 
 /* Product.tsx */
 
-<<<<<<< HEAD
-.hero-text h3 {
-  font-size: 50px;
-  line-height: 0.1;
-}
-.hero-text h1 {
-  font-size: 100px;
-}
-
-.hero-text p {
-  font-size: 20px;
-}
-
-.hero-img {
-  height: 500px;
-  width: 1000px;
-}
-
-.nav-menu {
-  display: none;
-  font-size: 25px;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-=======
->>>>>>> fc6b7899cf0a882702d8360babb4222bcdd7f8e2
 .product-menu {
   display: grid;
   gap: 20px;
@@ -316,13 +282,8 @@ footer {
   justify-content: center;
   align-items: center;
   width: 500px;
-<<<<<<< HEAD
-  height: 100%;
-  background-color: #fff;
-=======
   flex-direction: column;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
->>>>>>> fc6b7899cf0a882702d8360babb4222bcdd7f8e2
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
@@ -341,7 +302,7 @@ footer {
 
 .form-group input {
   padding: 10px;
-  width: 300px;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
@@ -350,17 +311,12 @@ footer {
 .form-group label {
   display: inline-block;
   font-weight: bold;
-<<<<<<< HEAD
-display: flex;
-  margin-bottom: 5px;
-=======
   margin: 10px;
   width: 300px;
 }
 
 .count {
-  width: 10px;
->>>>>>> fc6b7899cf0a882702d8360babb4222bcdd7f8e2
+  width: 30px;
 }
 
 .social-icons-btn {
@@ -385,9 +341,6 @@ display: flex;
   transition: all 0.15s ease;
 }
 
-.forget{
- margin-top: 10px; 
-}
 .facebook:hover {
   background: #2b6ff9;
   animation: fadeIn 1s;
@@ -502,14 +455,6 @@ select {
     width: 300px;
   }
 
-<<<<<<< HEAD
-  .form-group input {
-    width: 230px;
-  }
-
-  .footer-content{
-    display: block;
-=======
   .footer-content {
     display: table-caption;
   }
@@ -522,7 +467,6 @@ select {
     font-weight: bold;
     margin: 10px;
     width: 200px;
->>>>>>> fc6b7899cf0a882702d8360babb4222bcdd7f8e2
   }
 }
 

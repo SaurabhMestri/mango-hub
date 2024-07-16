@@ -14,7 +14,7 @@ interface ProductsProps  {
 const Product = (props: ProductsProps) => {
   
   return (
-    <div id="products" className="container">
+    <div className="container">
       <h1>Mangoes Variety</h1>
       <div className="product-menu">
         {props?.products?.map((product, index: Key) => {
