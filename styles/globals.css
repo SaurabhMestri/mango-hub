@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
   --max-width: 1100px;
-  /* --border-radius: 12px; */
+  --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -85,6 +84,7 @@ html,
 body {
   overflow-x: hidden;
   font-family: "Poppins";
+  font-weight: 900;
   scroll-behavior: smooth;
 }
 
@@ -141,8 +141,19 @@ button:hover {
   margin-left: auto;
 }
 
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* DESKTOP */
 
+/* Header.tsx */
 header {
   background-color: transparent;
   width: 100%;
@@ -166,9 +177,15 @@ header {
   font-weight: 600;
 }
 
+.nav-menu {
+  display: none;
+}
+
 .sidebar {
   display: none;
 }
+
+/* Home.tsx */
 
 .hero-section {
   background-image: url("/images/background1.jpg");
@@ -179,14 +196,44 @@ header {
   animation: fadeIn 1s;
 }
 
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  padding-left: 80px;
+  top: 300px;
+  left: 200px;
+  width: 600px;
+}
+
+.hero-text h3 {
+  font-size: 50px;
+  line-height: 0.1;
+}
+
+.hero-text h1 {
+  font-size: 100px;
+}
+
+.hero-text p {
+  font-size: 20px;
+}
+
+.hero-img {
+  height: 500px;
+  width: 1000px;
+}
+
+/* Footer.tsx */
+
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   padding: 50px 10px;
-  background-color: #020202;
-  color:#fff;
+  background-color: #ffffff;
 }
 
 .footer-content {
@@ -207,47 +254,8 @@ footer {
   padding: 10px;
 }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 80vh;
-  padding-left: 80px;
-  top: 300px;
-  left: 200px;
-  width: 600px;
-}
+/* Product.tsx */
 
-.hero-text h3 {
-  font-size: 50px;
-  line-height: 0.1;
-}
-.hero-text h1 {
-  font-size: 100px;
-}
-
-.hero-text p {
-  font-size: 20px;
-}
-
-.hero-img {
-  height: 500px;
-  width: 1000px;
-}
-
-.nav-menu {
-  display: none;
-  font-size: 25px;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .product-menu {
   display: grid;
   gap: 20px;
@@ -267,13 +275,15 @@ footer {
   cursor: pointer;
 }
 
+/* Login and Application_Form  */
+
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 500px;
-  height: 100%;
-  background-color: #fff;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
@@ -283,21 +293,30 @@ footer {
 }
 
 .login-container h2 {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin: 10px;
 }
 
 .form-group input {
   padding: 10px;
-  width: 300px;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
 }
 
 .form-group label {
+  display: inline-block;
   font-weight: bold;
-display: flex;
-  margin-bottom: 5px;
+  margin: 10px;
+  width: 300px;
+}
+
+.count {
+  width: 30px;
 }
 
 .social-icons-btn {
@@ -311,7 +330,6 @@ display: flex;
   font-size: 2.5rem;
   font-weight: 500;
   text-decoration: none;
-  /* background: #111; */
   margin: 0.2rem;
   display: flex;
   justify-content: center;
@@ -323,9 +341,6 @@ display: flex;
   transition: all 0.15s ease;
 }
 
-.forget{
- margin-top: 10px; 
-}
 .facebook:hover {
   background: #2b6ff9;
   animation: fadeIn 1s;
@@ -335,6 +350,15 @@ display: flex;
   animation: fadeIn 1s;
   background: orange;
 }
+
+select {
+  padding: 10px;
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
 /* Mobile view */
 @media screen and (max-width: 767px) {
   .container {
@@ -431,12 +455,18 @@ display: flex;
     width: 300px;
   }
 
+  .footer-content {
+    display: table-caption;
+  }
   .form-group input {
-    width: 230px;
+    width: 100%;
   }
 
-  .footer-content{
-    display: block;
+  .form-group label {
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px;
+    width: 200px;
   }
 }
 
@@ -444,6 +474,10 @@ display: flex;
 @media (min-width: 768px) {
   .container {
     width: 750px;
+  }
+
+  .form-group input {
+    width: 100%;
   }
 }
 
