@@ -1,88 +1,147 @@
 import React from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import { Button, MenuItem } from "@mui/material";
 
+const mango_variety = [
+  {
+    value: "Alphonso(Hapus)",
+    label: "Alphonso(Hapus)",
+  },
+
+  {
+    value: "Devgad(Hapus)",
+    label: "Devgad(Hapus)",
+  },
+
+  {
+    value: "Totapuri",
+    label: "Totapuri",
+  },
+  {
+    value: "Kesar",
+    label: "Kesar",
+  },
+  {
+    value: "Rajapuri",
+    label: "Rajapuri",
+  },
+  {
+    value: "Himsagar",
+    label: "Himsagar",
+  },
+];
+
+const mango_size = [
+  {
+    value: "Small(150-180g)",
+    label: "Small(150-180g) ",
+  },
+  {
+    value: "Medium(180-250g)",
+    label: "Medium(180-250g)",
+  },
+  {
+    value: "Large(250-350g)",
+    label: "Large(250-350g)",
+  },
+];
+
+const mango_quantity = [
+  {
+    value: "2 Dozen",
+    label: "2 Dozen",
+  },
+  {
+    value: "4 Dozen",
+    label: "4 Dozen",
+  },
+  {
+    value: "5 Dozen",
+    label: "5 Dozen",
+  },
+];
 type Props = {};
 
 const Register = (props: Props) => {
   return (
-    <div className="container">
+    <Box className="container">
       <div className="login-container">
         <h2>ApplicationForm</h2>
         <div className="form-group">
-          <label htmlFor="">
-            Full Name
-            <input type="text" />
-          </label>
+          <TextField id="outlined-basic" label="Full Name" variant="outlined" />
         </div>
         <div className="form-group">
-          <label htmlFor="Email">
-            Email
-            <input type="email" />
-          </label>
+          <TextField
+            id="outlined-basic"
+            label="Email Address"
+            variant="outlined"
+          />
         </div>
         <div className="form-group">
-          <label htmlFor="Phone No">
-            Phone No
-            <input type="text" />
-          </label>
+          <TextField id="outlined-basic" label="Phone No" variant="outlined" />
         </div>
         <div className="form-group">
-          <label htmlFor="Address">
-            Address
-            <input type="text" />
-          </label>
+          <TextField
+            id="outlined-basic"
+            label="Full Address"
+            variant="outlined"
+          />
         </div>
 
         <div className="form-group">
-          <label htmlFor="mango variety">Mango Variety</label>
-          <div className="select-list">
-            <select name="" id="">
-              <option className="" value="select">
-                Select mango variety
-              </option>
-              <option value=" ">Alphonso(Hapus)</option>
-              <option value=" ">Devgad(Hapus)</option>
-              <option value="">Totapuri</option>
-              <option value="">Kesar</option>
-              <option value="">Rajapuri</option>
-              <option value="">Himsagar</option>
-            </select>
-          </div>
+          <TextField
+            id="outlined-select-currency"
+            select
+            label="Mango Variety"
+            defaultValue="Ratnagiri"
+            helperText="Please select your mango variety"
+          >
+            {mango_variety.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
         </div>
         <div className="form-group">
-          <label htmlFor="mango variety">Mango Size</label>
-          <div className="select-list">
-            <select name="" id="">
-              <option className="" value="select">
-                Select Mango Size
-              </option>
-              <option value="">Small(150-180g) </option>
-              <option value="">Medium(180-250g)</option>
-              <option value="">Large(250-350g)</option>
-              <option value="">Extra-large(250-350g)</option>
-            </select>
-          </div>
+          <TextField
+            id="outlined-select-currency"
+            select
+            label="Mango Size"
+            defaultValue="Ratnagiri"
+            helperText="Please select your mango size"
+          >
+            {mango_size.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
         </div>
         <div className="form-group">
-          <label htmlFor="mango variety">Mango Quantity</label>
-          <div className="select-list">
-            <select name="" id="">
-              <option className="" value="select">
-                Select mango variety
-              </option>
-              <option value=" ">1 Dozen</option>
-              <option value=" ">2 Dozen</option>
-              <option value=" ">3 Dozen</option>
-              <option value=" ">4 Dozen</option>
-              <option value=" ">5 Dozen</option>
-              
-            </select>
-          </div>
+          <TextField
+            id="outlined-select-currency"
+            select
+            label="Mango Quantity"
+            defaultValue="Ratnagiri"
+            helperText="Please select your mango quantity"
+          >
+            {mango_quantity.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
         </div>
+
         <div className="submit-btn">
-          <button className="btn">Submit</button>
+        <Button variant="contained" color="success">
+       Submit
+      </Button>
         </div>
       </div>
-    </div>
+    </Box>
   );
 };
 

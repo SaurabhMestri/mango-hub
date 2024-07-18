@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import Product, { ProductInterface } from "./Product";
+import Menu from "./Menu";
 
 interface HomeProps {
   products : ProductInterface[]
@@ -12,7 +13,7 @@ const Home = (props : HomeProps) => {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>MangoHub</title>
         <meta name="description" content="Mango Hub" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -34,7 +35,8 @@ const Home = (props : HomeProps) => {
             <button className="btn2">See More</button>
           </div>
         </div>
-        <Product products={props.products} />
+        {/* <Product products={props.products} /> */}
+        <Menu/>
       </div>
     </>
   );

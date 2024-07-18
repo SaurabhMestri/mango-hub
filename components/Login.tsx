@@ -4,6 +4,7 @@ import Google from "@/public/images/google.png";
 import Facebook from "@/public/images/facebook.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { TextField } from "@mui/material";
 
 type Props = {};
 
@@ -20,35 +21,28 @@ const Login = (props: Props) => {
               <div></div>
             ) : (
               <div>
-                <label>Name</label>
-                <input
-                  placeholder="Enter Your name"
-                  type="text"
-                  id="Name"
-                  name="Name"
-                  required
-                />
+                <TextField
+            id="outlined-basic"
+            label="Name"
+            variant="outlined"
+          />
               </div>
             )}
           </div>
           <div className="form-group">
-            <label>Username</label>
-            <input
-              placeholder="Username"
-              type="text"
-              id="username"
-              name="username"
-              required
-            />
+          <TextField
+            id="outlined-basic"
+            label="Username"
+            variant="outlined"
+          />
           </div>
           <div className="form-group">
-            <label>Password</label>
-            <input
-              placeholder="Password"
-              type="password"
-              id="password"
-              name="password"
-            />
+          <TextField
+            id="outlined-basic"
+            label="Password"
+            type="password"
+            variant="outlined"
+          />
           </div>
           {action === "Sign Up" ? (
             <div></div>
