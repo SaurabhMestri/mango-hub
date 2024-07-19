@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import Product, { ProductInterface } from "./Product";
 import Menu from "./Menu";
+import Item from "./Item"
 
 interface HomeProps {
   products : ProductInterface[]
@@ -37,6 +38,7 @@ const Home = (props : HomeProps) => {
         </div>
         {/* <Product products={props.products} /> */}
         <Menu/>
+        <Item/>
       </div>
     </>
   );

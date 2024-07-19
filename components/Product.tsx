@@ -15,7 +15,8 @@ const Product = (props: ProductsProps) => {
   
   return (
     <div className="container">
-      <h1>Mangoes Variety</h1>
+      <h1 className="center" >Mangoes Variety</h1>
+      <div className="product_container">
       <div className="product-menu">
         {props?.products?.map((product, index: Key) => {
           return (
@@ -30,6 +31,7 @@ const Product = (props: ProductsProps) => {
           );
         })}
       </div>
+    </div>
     </div>
     
   );
