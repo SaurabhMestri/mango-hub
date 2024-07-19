@@ -31,15 +31,15 @@ const Menu = () => {
   return (
     <Box>
       <div className="menu_list">
-        <h1>Mango Variety</h1>
+        <h1 className="center" >Mango Variety</h1>
         <div className="menu_item">
           {menu_list.map((menu_list, index ) => {
             return (
               <div key={index} className="menu_image">
                 <Image
                   src={menu_list.menu_image}
-                  height={100}
-                  width={100}
+                  height={200}
+                  width={200}
                   alt=""
                 />
                 <h3>{menu_list.menu_name}</h3>

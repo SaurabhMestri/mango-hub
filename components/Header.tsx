@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import menubar from "@/public/images/menu.png"
 
 type Props = {};
 
@@ -48,12 +49,12 @@ const Header = (props: Props) => {
           </div>
 
           <div onClick={openSidebar} className="nav-menu">
-            Menu
+          <Image src={menubar} width={30} height={30} alt=""/>
           </div>
 
           <div className={`sidebar ${isOpen ? "open" : ""}`}>
             <div onClick={closeSidebar} className="close-icon">
-              x
+            x
             </div>
             <div className="sidebar-links ">
               {navLinks?.map((link) => (
