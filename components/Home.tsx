@@ -4,6 +4,7 @@ import React from "react";
 import Product, { ProductInterface } from "./Product";
 import Menu from "./Menu";
 import Item from "./Item"
+import About from "./about"
 
 interface HomeProps {
   products : ProductInterface[]
@@ -39,6 +40,7 @@ const Home = (props : HomeProps) => {
         {/* <Product products={props.products} /> */}
         <Menu/>
         <Item/>
+        <About/>
       </div>
     </>
   );
