@@ -4,7 +4,11 @@ import React from "react";
 import Product, { ProductInterface } from "./Product";
 import Menu from "./Menu";
 import Item from "./Item"
+
+import About from "./about"
+
 import Feedback from "./feedback"
+
 
 interface HomeProps {
   products: ProductInterface[]
@@ -38,6 +42,11 @@ const Home = (props: HomeProps) => {
           </div>
         </div>
         {/* <Product products={props.products} /> */}
+
+        <Menu/>
+        <Item/>
+        <About/>
+
         <div>
           <Menu />
         </div>
@@ -45,6 +54,7 @@ const Home = (props: HomeProps) => {
       </div>
       <div>
         <Feedback/>
+
       </div>
     </>
   );

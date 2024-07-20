@@ -376,10 +376,9 @@ select {
   justify-content: center;
   margin: 0 auto;
   text-align: center;
-  overflow-x: hidden;
+  overflow-x: hidden; 
   overflow: scroll;
   scroll-behavior: smooth;
-  -ms-overflow-style: none;
   scrollbar-width: none;
 
 
@@ -407,6 +406,15 @@ div::-webkit-scrollbar {
   margin: 20px 0 20px 0;
   font-weight: 600;
 }
+
+
+.hero-container{
+  background-image: url("/images/about.jpg");
+  height: 100vh;
+  margin:30px 0 0 0  ;
+  border-radius: 20px;
+}
+
 
 
 /* feedback.tsx */
@@ -457,6 +465,7 @@ div::-webkit-scrollbar {
   width: 100%;
   margin: auto;
 }
+
 
 
 /* Mobile view */
