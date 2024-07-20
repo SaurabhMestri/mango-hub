@@ -6,12 +6,12 @@ import Image from "next/image";
 const product_list = [
   {
     product_name: " Ratnagiri Hapus (small 150-180g)",
-    product_image: "/images/product2.png",
+    product_image: "/images/variety/Ratnagiri.jpg",
     price: 100,
   },
   {
-    product_name: " Ratnagiri Hapus (small 150-180g)",
-    product_image: "/images/product2.png",
+    product_name: " Devgad Hapus (small 150-180g)",
+    product_image: "/images/variety/devgad.jpg",
     price: 300,
   },
   {
