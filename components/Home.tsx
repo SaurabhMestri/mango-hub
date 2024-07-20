@@ -4,13 +4,14 @@ import React from "react";
 import Product, { ProductInterface } from "./Product";
 import Menu from "./Menu";
 import Item from "./Item"
+import Feedback from "./feedback"
 
 interface HomeProps {
-  products : ProductInterface[]
+  products: ProductInterface[]
 }
 
-const Home = (props : HomeProps) => {
-  
+const Home = (props: HomeProps) => {
+
   return (
     <>
       <Head>
@@ -20,7 +21,7 @@ const Home = (props : HomeProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container">
-        <div className="hero-section">
+        <div className="hero-section border-radius">
           <div className="hero-text">
             <h3>Organic</h3>
             <h1>Mango</h1>
@@ -37,8 +38,13 @@ const Home = (props : HomeProps) => {
           </div>
         </div>
         {/* <Product products={props.products} /> */}
-        <Menu/>
-        <Item/>
+        <div>
+          <Menu />
+        </div>
+        <Item />
+      </div>
+      <div>
+        <Feedback/>
       </div>
     </>
   );

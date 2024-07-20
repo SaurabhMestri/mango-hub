@@ -129,6 +129,10 @@ button:hover {
   animation: fadeIn 0.8s;
 }
 
+.border-radius {
+  border-radius: 30px;
+}
+
 .container {
   display: block;
   max-width: unset;
@@ -188,7 +192,6 @@ header {
 .hero-section {
   background-image: url("/images/background1.jpg");
   background-size: cover;
-  border-radius: 30px;
   margin-bottom: 20px;
   height: 100%;
   animation: fadeIn 1s;
@@ -260,14 +263,14 @@ footer {
   grid-template-columns: repeat(4, 1fr);
   margin: 20px auto;
   width: 100%;
- 
+
 }
 
 .product-card {
   background-color: #f5f1f1;
   border-radius: 20px;
   height: 350px;
- 
+
   animation: fadeIn 0.5s;
   align-items: center;
   text-align: center;
@@ -275,23 +278,23 @@ footer {
   cursor: pointer;
 }
 
-.product-menu .product-card{
+.product-menu .product-card {
   text-align: center;
   transition: 0.3s ease-in-out;
   /* background-color: #009c0d; */
 }
 
-.product-menu .product-card:hover{
-  box-shadow: rgba(17,12,46,0,15)0px 48px 100px 0px;
+.product-menu .product-card:hover {
+  box-shadow: rgba(17, 12, 46, 0, 15)0px 48px 100px 0px;
   transform: scale(1.1);
 }
 
-.product_item{
-display: flex;
-width: 500px;
-justify-content: center;
-margin: 20px auto;
-gap: 20px;
+.product_item {
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 20px;
 }
 
 
@@ -378,8 +381,8 @@ select {
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  
-  
+
+
 }
 
 div::-webkit-scrollbar {
@@ -391,9 +394,12 @@ div::-webkit-scrollbar {
 .menu_item img {
   background-color: #009c0d;
   border-radius: 50%;
+  border: 5px solid orange;
+  cursor: pointer;
 }
 
-.center{
+
+.center {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -401,6 +407,57 @@ div::-webkit-scrollbar {
   margin: 20px 0 20px 0;
   font-weight: 600;
 }
+
+
+/* feedback.tsx */
+
+
+.feedback-container {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px auto;
+  width: 100%;
+  
+
+}
+
+.feedback-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.content:hover{
+  opacity: 1;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.feedback-image img{
+ 
+  border-radius: 30px;
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
 
 /* Mobile view */
 @media screen and (max-width: 767px) {
@@ -509,8 +566,8 @@ div::-webkit-scrollbar {
   }
 
   .menu_item img {
-width: 100px;
-height: 100px;
+    width: 100px;
+    height: 100px;
 
   }
 }

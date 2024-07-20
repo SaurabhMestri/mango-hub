@@ -4,27 +4,27 @@ import React from "react";
 const menu_list = [
   {
     menu_name: "Alphonso",
-    menu_image: "/images/product2.png",
+    menu_image: "/images/variety/Ratnagiri.jpg",
   },
   {
     menu_name: "Devgad",
-    menu_image: "/images/product2.png",
+    menu_image: "/images/variety/devgad.jpg",
   },
   {
     menu_name: "Totapuri",
-    menu_image: "/images/product2.png",
+    menu_image: "/images/variety/Totapuri.png",
   },
   {
     menu_name: "Kesar",
-    menu_image: "/images/product2.png",
+    menu_image: "/images/variety/kesar.jpg",
   },
   {
     menu_name: "Rajapuri",
-    menu_image: "/images/product2.png",
+    menu_image: "/images/variety/Rajapuri.jpg",
   },
   {
     menu_name: "Himsagar",
-    menu_image: "/images/product2.png",
+    menu_image: "/images/variety/Himsagar.jpg",
   },
 ];
 const Menu = () => {
