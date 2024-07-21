@@ -8,6 +8,7 @@ import Item from "./Item"
 import About from "./about"
 
 import Feedback from "./feedback"
+import ProductDetails from "../pages/ProductDetails";
 
 
 interface HomeProps {
@@ -42,11 +43,6 @@ const Home = (props: HomeProps) => {
           </div>
         </div>
         {/* <Product products={props.products} /> */}
-
-        <Menu/>
-        <Item/>
-        <About/>
-
         <div>
           <Menu />
         </div>
@@ -54,8 +50,8 @@ const Home = (props: HomeProps) => {
       </div>
       <div>
         <Feedback/>
-
       </div>
+      
     </>
   );
 };

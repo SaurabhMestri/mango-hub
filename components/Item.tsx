@@ -1,7 +1,8 @@
-import React, { Key } from 'react'
-import Box from "@mui/material/Box"; 
+import React, { Key } from "react";
+import Box from "@mui/material/Box";
 import Image from "next/image";
-
+import Link from "next/link";
+import ProductDetails from "../pages/ProductDetails";
 
 const product_list = [
   {
@@ -24,36 +25,37 @@ const product_list = [
     product_image: "/images/product2.png",
     price: 100,
   },
-  
-]
+];
 
 const Item = () => {
   return (
     <div className="container">
-        <h1 className='center'>Mostly Sales </h1>
-      <Box >
-      <div className="product_container">
-        <div className="product-menu">
-          {product_list.map((product_list, index: Key ) => {
-            return (
-              <div key={index} className="product-card">
-                <Image
-                  src={product_list.product_image}
-                  height={200}
-                  width={200}
-                  alt=""
-                />
-                <h3>{product_list.product_name}</h3>
-                <p>{product_list.price}</p>
-                <button className="btn2">Add to Cart</button>
-              </div>
-            );
-          })}
+      <h1 className="center">Mostly Sales </h1>
+      <Box>
+        <div className="product_container">
+      <Link href="../ProductDetails">
+            <div className="product-menu">
+              {product_list.map((product_list, index: Key) => {
+                return (
+                  <div key={index} className="product-card">
+                    <Image
+                      src={product_list.product_image}
+                      height={200}
+                      width={200}
+                      alt=""
+                    />
+                    <h3>{product_list.product_name}</h3>
+                    <p>{product_list.price}</p>
+                    <button className="btn2">Add to Cart</button>
+                  </div>
+                );
+              })}
+            </div>
+              </Link>
         </div>
-      </div>
-    </Box>
+      </Box>
     </div>
-  )
-}
+  );
+};
 
-export default Item
+export default Item;
