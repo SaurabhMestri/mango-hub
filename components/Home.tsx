@@ -16,6 +16,7 @@ interface HomeProps {
 }
 
 const Home = (props: HomeProps) => {
+console.log(props);
 
   return (
     <>
@@ -42,9 +43,8 @@ const Home = (props: HomeProps) => {
             <button className="btn2">See More</button>
           </div>
         </div>
-        {/* <Product products={props.products} /> */}
         <div>
-          <Menu />
+          <Menu products={props?.products} />
         </div>
         <Item />
       </div>
