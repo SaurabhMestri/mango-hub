@@ -520,6 +520,22 @@ div::-webkit-scrollbar {
   margin: 20px;
 }
 
+/* ProductReview */
+.product-image-review {
+  display: flex;
+  gap: 10px;
+  overflow-x: hidden;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  transition: 2s;
+}
+
+.product-review {
+  width: 100%;
+  margin-top: 10px;
+}
+
 /* Mobile view */
 @media screen and (max-width: 767px) {
   .container {
@@ -617,8 +633,6 @@ div::-webkit-scrollbar {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
- 
-
   .login-container {
     width: 300px;
   }
@@ -634,7 +648,7 @@ div::-webkit-scrollbar {
   .menu_item {
     display: flex;
     gap: 50px;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     margin: 0 auto;
     text-align: center;
     overflow-x: hidden;
@@ -682,6 +696,10 @@ div::-webkit-scrollbar {
 @media (min-width: 992px) {
   .container {
     width: 970px;
+  }
+  
+  .product-container{
+    
   }
 }
 
